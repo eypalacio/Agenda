@@ -1,0 +1,22 @@
+/*course*/
+
+.fondo {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    background-image: url("assets/este.jpg");
+    /*background: white;*/
+    /*background: linear-gradient(white, deepskyblue, mediumpurple);*/
+    /*background: linear-gradient(#243b55, cornflowerblue);*/
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}

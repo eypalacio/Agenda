@@ -1,0 +1,27 @@
+<div class="fondo">
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre Sistema</th>
+                <th scope="col">Acronimo</th>
+            </tr>
+
+        </thead>
+
+        <tbody [@listAnimation]="list.length">
+            <tr *ngFor="let item of list">
+                <td>{{ item.id}}</td>
+                <td>{{ item.nomb_sistema}}</td>
+                <td>{{ item.alias_sistema}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ul>
+        <li *ngFor="let clickedRow of clickedRows">
+            Clicked on {{clickedRow.nomb_sistema}}
+        </li>
+    </ul>
+
+</div>

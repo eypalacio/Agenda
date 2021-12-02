@@ -1,0 +1,131 @@
+    /* Structure */
+
+    .example-container {
+        position: relative;
+        min-height: 200px;
+    }
+
+    .example-table-container {
+        position: relative;
+        height: 350px;
+        overflow: auto;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .example-loading-shade {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 56px;
+        right: 0;
+        background: rgba(0, 0, 0, 0.15);
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .example-rate-limit-reached {
+        color: #f44336;
+        max-width: 360px;
+        text-align: center;
+    }
+    /* Column Widths */
+
+    .mat-column-number,
+    .mat-column-state {
+        max-width: 64px;
+    }
+
+    .mat-column-created {
+        max-width: 124px;
+    }
+
+    .bg-darkest {
+        background-color: rgba(37, 37, 37);
+        color: whitesmoke;
+    }
+
+    td {
+        color: whitesmoke;
+    }
+
+    .full-container {
+        padding-top: 25px;
+        padding-inline: 20px;
+    }
+
+    td.mat-column-actions {
+        width: 130px;
+        padding-right: 8px;
+    }
+
+    mat-form-field {
+        margin-inline: 10px;
+    }
+
+    .encabezados-filtros {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filtros {
+        max-height: 80px;
+    }
+
+    mat-label {
+        font-size: 11px;
+    }
+
+    .mat-form-field-busqueda {
+        max-width: 300px;
+    }
+
+    .row-visibility-none {
+        display: none;
+    }
+
+    .font-bold {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    /* // mat-icon-stepper selected color change  */
+
+     ::ng-deep .mat-step-header .mat-step-icon-selected,
+    .mat-step-header .mat-step-icon-state-done,
+    .mat-step-header .mat-step-icon-state-edit {
+        background-color: rgb(90, 90, 90)!important;
+    }
+
+     ::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+        color: white;
+    }
+    /* // mat-input error outline color */
+
+     ::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
+        color: white!important;
+        opacity: 0.8!important;
+    }
+    /* // mat-input carent color */
+
+     ::ng-deep .mat-input-element {
+        caret-color: white!important;
+    }
+    /* // mat-input error carent color */
+
+     ::ng-deep .mat-form-field-label {
+        color: white;
+        /* // color: $mainColor!important; */
+    }
+    /* // mat-label focused style */
+
+     ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+        color: white;
+    }
+    /* // mat-label error style */
+
+     ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
+        color: white;
+    }
