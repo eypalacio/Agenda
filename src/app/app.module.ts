@@ -19,17 +19,23 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { HttpClientModule } from '@angular/common/http';
+import { MenuComponent } from './menu/menu.component';
+
+const materialModules =[
+  MatIconModule
+]; 
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
+    MenuComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-  HttpClientModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,

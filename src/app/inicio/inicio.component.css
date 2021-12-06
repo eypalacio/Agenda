@@ -10,13 +10,35 @@
     justify-content: center;
     display: flex;
     flex-direction: row;
-    background-image: url("assets/este.jpg");
-    /*background: white;*/
+    background: white;
     /*background: linear-gradient(white, deepskyblue, mediumpurple);*/
     /*background: linear-gradient(#243b55, cornflowerblue);*/
+}
+
+h1{
+    position: absolute;
+    top: 15%;
+
 }
 
 .item {
     display: flex;
     flex-direction: column;
 }
+
+.table{
+    position: absolute;
+    width: 900px;
+    height: 500px;
+    top: 23%;
+}
+
+.circleBottom {
+    height: 450px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: 200px;
+    margin-left: 1100px;
+   /* box-shadow: inset 0px 5px 15px rgb(90, 89 , 89), 0px 5px 15px rgb(77, 75, 75); */
+  }

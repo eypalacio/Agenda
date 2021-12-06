@@ -1,6 +1,10 @@
 <div class="fondo">
 
-    <table class="table table-dark table-striped">
+    <h1 style="font-family: Agatha;">Agenda</h1>
+
+
+
+    <table class="table table-hover table-striped">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -18,6 +22,9 @@
             </tr>
         </tbody>
     </table>
+
+    <div class="circleBottom"></div>
+
     <ul>
         <li *ngFor="let clickedRow of clickedRows">
             Clicked on {{clickedRow.nomb_sistema}}

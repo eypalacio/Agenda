@@ -1,0 +1,91 @@
+<body>
+<div class="sidebar">
+    <div class="logo_content">
+        <div class="logo">
+            <i class=''></i>
+            <div class="logo_name">Agenda</div>
+        </div>
+        
+        <mat-icon (click)="menu()">home</mat-icon>          
+
+    </div>
+    <ul class="nav_list">  
+        <li>
+            <a >
+                <i class="bi bi-search"  (click) = "menu()"></i>
+                <input type="text" placeholder="Search...">
+            </a>
+            <span class="tooltip">nombre</span>
+        </li>
+
+        <li>
+            <a>
+            <i class="bi bi-person"></i>
+            <span class="links_name">primero</span>
+</a>
+            <span class="tooltip">nombre</span>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="bi bi-house"></i>
+                <span class="links_name">segundo</span>
+            </a>
+            <span class="tooltip">nombre</span>
+        </li>
+
+    </ul>
+    <div class="profile_content">
+        <div class="profile">
+            <div class="profile_details">
+            <i class="bi bi-person"></i>
+                <div class="name_job">
+                    <div class="name">Elaine</div>
+                    <div class="job">Ing</div>
+                </div>
+            </div>
+        <i class="bi bi-box-arrow-right" id="log_out"></i>
+    </div>
+    </div>
+</div>
+
+<div class="home_content">
+    <div class="text" style="font-family: Agatha;">Agenda</div>
+    <table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre Sistema</th>
+            <th scope="col">Acronimo</th>
+        </tr>
+
+    </thead>
+
+    <tbody [@listAnimation]="list.length">
+        <tr *ngFor="let item of list">
+            <td>{{ item.id}}</td>
+            <td>{{ item.nomb_sistema}}</td>
+            <td>{{ item.alias_sistema}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<script>
+    let btn = document.querySelector("#btn");
+    let siderbar = document.querySelector(".sidebar");
+    let searchBtn = document.querySelector(".bi-search");
+
+    btn.onclick = function(){
+        siderbar.classList.toggle("active");
+    }
+
+    searchBtn.onclick = function(){
+        siderbar.classList.toggle("active");
+    }
+
+</script>
+
+
+
+</body>

@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Sistema } from '../models/sistema';
 import { ApiService } from '../services/api.service';
+import { MatIconModule } from '@angular/material/icon';
+
 
 const listAnimation = trigger('listAnimation', [
   transition('* <=> *', [
@@ -18,31 +20,38 @@ const listAnimation = trigger('listAnimation', [
 ]);
 
 @Component({
-  selector: 'app-inicio',
-  templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.css'],
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.css'],
   animations: [listAnimation]
 
 })
-export class InicioComponent implements OnInit {
+export class MenuComponent implements OnInit {
 
-dataSource = new MatTableDataSource<any>()
+  dataSource = new MatTableDataSource<any>()
 list:Sistema[]  = []
 
-  constructor(private api:ApiService) { }
+constructor(private api:ApiService) { }
 
   ngOnInit(): void {
+
     this.api.getSistema().subscribe((result)=>{
       console.log('', result);
       this.dataSource= new MatTableDataSource(result);
       this.list = result;  
     }
     )
-
-
+    
   }
 
   displayedColumns: string[] = ['id', 'nomb_sistema', 'alias_sistema'];
   clickedRows = new Set<Sistema>();
+
+  menu() {
+    let siderbar: any = document.querySelector(".sidebar");
+    console.log("btn", siderbar);
+    siderbar.classList.toggle("active");
+
+  }
 
 }
